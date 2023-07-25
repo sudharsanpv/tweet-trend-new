@@ -4,11 +4,15 @@ pipeline {
             label 'maven'
         }
     }
-
+environment {
+    PATH = "/opt/apache-maven-3.9.3/bin:$PATH"
+}
     stages {
-        stage('Hello') {
+        stage("build"){
             steps {
-                echo 'Devops Master'
+                 echo "----------- build started ----------"
+                sh 'mvn clean deploy -Dmaven.test.skip=true'
+                 echo "----------- build complted ----------"
             }
         }
     }
