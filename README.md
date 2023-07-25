@@ -1,4 +1,4 @@
-# Ttrend application
+# Trend application for devops
 
 This is a small applicaiton which contains main and test folders.  
 Main contains application code.  
