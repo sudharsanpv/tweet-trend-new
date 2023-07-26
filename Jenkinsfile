@@ -17,15 +17,15 @@ environment {
         }
 
 
-    stage("SonarQube analysis") {
+    stage('SonarQube analysis') {
     environment {
-        scannerHome = tool 'sonarscanner'
+        scannerHome = tool 'dev-sonar-scanner'
 
     }
     steps{
     
-    withSonarQubeEnv('sonar server') { // If you have configured more than one global server connection, you can specify its name
-      sh "${scannerHome}/bin/sonarscanner"
+    withSonarQubeEnv('dev-sonar-server') { // If you have configured more than one global server connection, you can specify its name
+      sh "${scannerHome}/bin/sonar-scanner"
     }
     }   
 
