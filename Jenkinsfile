@@ -1,5 +1,5 @@
 def registry = 'https://devopscloudaws.jfrog.io/'
-def imageName = 'valaxy05.jfrog.io/valaxy-docker-local/dockerimage'
+def imageName = 'devopscloudaws.jfrog.io/devops-docker-local/dockerimage'
 def version   = '2.1.2'
 pipeline {
     agent {
